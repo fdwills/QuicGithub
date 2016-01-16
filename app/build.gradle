@@ -76,22 +76,6 @@ android {
         flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
     }
 
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-
-    afterEvaluate {
-        tasks.matching {
-            it.name.startsWith('dex')
-        }.each { dx ->
-            if (dx.additionalParameters == null) {
-                dx.additionalParameters = []
-            }
-            dx.additionalParameters += '--multi-dex'
-        }
-    }
-
     lintOptions {
         disable 'MissingTranslation'
         disable 'InvalidPackage'
@@ -109,6 +93,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.1.1'
     compile 'com.android.support:design:23.1.1'
+    compile 'com.android.support:multidex:1.0.1'
     compile 'com.jakewharton:butterknife:7.0.1'
     compile 'com.google.code.gson:gson:2.4'
     compile 'com.squareup.picasso:picasso:2.5.2'

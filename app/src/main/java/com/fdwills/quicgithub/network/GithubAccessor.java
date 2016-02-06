@@ -1,5 +1,7 @@
 package com.fdwills.quicgithub.network;
 
+import android.util.Log;
+
 import retrofit.ErrorHandler;
 import retrofit.RequestInterceptor;
 import retrofit.RestAdapter;
@@ -31,7 +33,13 @@ public class GithubAccessor {
                             request.addHeader("Accept", "application/vnd.github.v3+json");
                         }
                     }).
-                    //setErrorHandler(new PWErrorHandler()).
+                    setLog(new RestAdapter.Log() {
+                        @Override
+                        public void log(String message) {
+                            Log.d("http", message);
+                        }
+                    }).
+                    setLogLevel(RestAdapter.LogLevel.FULL).
                     build();
             mInstance = retrofit.create(GithubApi.class);
         }

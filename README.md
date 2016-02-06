@@ -1,9 +1,10 @@
-## Rxjava + Retrofit + Picasso Example
+## An MVP Example of Rxjava + Retrofit + Picasso
 
-### Example
+### Description
 
-A github repo explorer example.
+A github repo explorer example of MVP framework.
 
-ref [github api](https://developer.github.com/v3/repos/)
+### Reference
 
-* no proguard
+* [github api](https://developer.github.com/v3/repos/)
+

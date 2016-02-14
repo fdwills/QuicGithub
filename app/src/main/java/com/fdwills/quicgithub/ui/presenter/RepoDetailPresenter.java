@@ -1,7 +1,6 @@
 package com.fdwills.quicgithub.ui.presenter;
 
 import com.fdwills.quicgithub.model.RepoDetail;
-import com.fdwills.quicgithub.network.GithubAccessor;
 import com.fdwills.quicgithub.ui.activity.BaseActivity;
 import com.fdwills.quicgithub.ui.activity.RepoDetailActivity;
 
@@ -12,7 +11,7 @@ import rx.schedulers.Schedulers;
 /**
  * Created by wills on 16/2/6.
  */
-public class RepoDetailPresenter implements IPresenter{
+public class RepoDetailPresenter extends BasePresenter {
 
     public RepoDetailActivity view;
 
@@ -27,11 +26,12 @@ public class RepoDetailPresenter implements IPresenter{
     }
 
     public RepoDetailPresenter(BaseActivity view) {
+        super(view);
         this.view = (RepoDetailActivity)view;
     }
 
     public void getRepoDetail(String name, String repo) {
-        GithubAccessor.getInstance().repo(name, repo).subscribeOn(Schedulers.io()).
+        GitHubAPI.repo(name, repo).subscribeOn(Schedulers.io()).
                 observeOn(AndroidSchedulers.mainThread()).
                 subscribe(new Observer<RepoDetail>() {
                     @Override

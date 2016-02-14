@@ -1,8 +1,6 @@
 package com.fdwills.quicgithub.ui.presenter;
 
 import com.fdwills.quicgithub.model.Repo;
-import com.fdwills.quicgithub.network.GithubAccessor;
-import com.fdwills.quicgithub.ui.activity.BaseActivity;
 import com.fdwills.quicgithub.ui.activity.MainActivity;
 
 import java.util.ArrayList;
@@ -16,7 +14,7 @@ import rx.schedulers.Schedulers;
 /**
  * Created by wills on 16/2/6.
  */
-public class MainPresenter implements IPresenter{
+public class MainPresenter extends BasePresenter {
 
     public MainActivity view;
 
@@ -30,8 +28,9 @@ public class MainPresenter implements IPresenter{
 
     }
 
-    public MainPresenter(BaseActivity view) {
-        this.view = (MainActivity)view;
+    public MainPresenter(MainActivity view) {
+        super(view);
+        this.view = view;
     }
 
     public void search() {
@@ -42,7 +41,7 @@ public class MainPresenter implements IPresenter{
             view.showToast("No user name");
         }
 
-        GithubAccessor.getInstance().repos(name).flatMap(new Func1<ArrayList<Repo>, Observable<Repo>>() {
+        GitHubAPI.repos(name).flatMap(new Func1<ArrayList<Repo>, Observable<Repo>>() {
             @Override
             public Observable<Repo> call(ArrayList<Repo> repos) {
                 return Observable.from(repos);

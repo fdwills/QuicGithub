@@ -1,4 +1,4 @@
-package com.fdwills.quicgithub.ui.component;
+package com.fdwills.quicgithub.core;
 
 import com.fdwills.quicgithub.network.GithubApi;
 import com.fdwills.quicgithub.network.GithubApiModule;

@@ -14,7 +14,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Repo explorer:"
-        android:maxLines="1"
         android:hint="Input user name"/>
 
     <LinearLayout
@@ -26,6 +25,7 @@
             android:id="@+id/exit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:maxLines="1"
             android:layout_weight="1"/>
 
         <Button

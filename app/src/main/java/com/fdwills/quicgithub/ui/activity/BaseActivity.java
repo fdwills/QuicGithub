@@ -4,7 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
 import com.fdwills.quicgithub.QuicGithubApp;
-import com.fdwills.quicgithub.ui.component.AppComponent;
+import com.fdwills.quicgithub.core.AppComponent;
 
 /**
  * Created by wills on 16/2/6.

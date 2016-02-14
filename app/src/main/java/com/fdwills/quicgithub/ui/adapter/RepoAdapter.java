@@ -1,4 +1,4 @@
-package com.fdwills.quicgithub.adapter;
+package com.fdwills.quicgithub.ui.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;

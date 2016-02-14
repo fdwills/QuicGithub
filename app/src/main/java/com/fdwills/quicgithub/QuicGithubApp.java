@@ -3,8 +3,8 @@ package com.fdwills.quicgithub;
 import android.app.Application;
 
 import com.fdwills.quicgithub.network.GithubApiModule;
-import com.fdwills.quicgithub.ui.component.AppComponent;
-import com.fdwills.quicgithub.ui.component.DaggerAppComponent;
+import com.fdwills.quicgithub.core.AppComponent;
+import com.fdwills.quicgithub.core.DaggerAppComponent;
 
 /**
  * Created by wills on 16/2/14.

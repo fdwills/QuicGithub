@@ -6,7 +6,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 
 import com.fdwills.quicgithub.R;
-import com.fdwills.quicgithub.adapter.RepoAdapter;
+import com.fdwills.quicgithub.ui.adapter.RepoAdapter;
 import com.fdwills.quicgithub.model.Repo;
 import com.fdwills.quicgithub.ui.presenter.MainPresenter;
 

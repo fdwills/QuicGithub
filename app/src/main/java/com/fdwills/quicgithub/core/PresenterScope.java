@@ -1,4 +1,4 @@
-package com.fdwills.quicgithub;
+package com.fdwills.quicgithub.core;
 
 import javax.inject.Scope;
 
@@ -6,5 +6,5 @@ import javax.inject.Scope;
  * Created by wills on 16/2/6.
  */
 @Scope
-public @interface ActivityScope {
+public @interface PresenterScope {
 }

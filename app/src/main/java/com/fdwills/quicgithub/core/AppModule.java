@@ -1,4 +1,4 @@
-package com.fdwills.quicgithub.ui.module;
+package com.fdwills.quicgithub.core;
 
 /**
  * Created by wills on 16/2/14.
